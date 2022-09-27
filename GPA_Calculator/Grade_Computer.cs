@@ -11,7 +11,7 @@ namespace GPA_Calculator
     internal class Grade_Computer
     {
      
-            public static void CalculcateStudentGrade()
+            public static void ComputeStudentGrade()
             {
                // Console.Clear();
                 Console.WriteLine("How many courses do you offer?");
@@ -48,7 +48,7 @@ namespace GPA_Calculator
                       Console.Clear();
                       
                       Console.WriteLine("\n****************************************************************************");
-                      Console.WriteLine("Sorry that was a wrong input, enter input in this format 'PHY 101'");
+                      Console.WriteLine("Sorry that was a wrong input, enter input in this format 'PHY101'");
                       goto Go_Here;
 
                     }
@@ -157,12 +157,12 @@ namespace GPA_Calculator
 
 
 
-                PrintTable.PrintTableMethod(courseList);
+                PrintTable.TableGenerater(courseList);
 
                 Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine($"Your Total weight point is : {totalWeightPoint}");
-            Console.WriteLine($"Your Toal course units offerd is : {totalCourseUnit}");
+            Console.WriteLine($"Your Toal course units offered is : {totalCourseUnit}");
             Console.WriteLine($"Your final gpa is :{ Math.Round(gpa, 2)}");
 
             Console.WriteLine("\nBye for now!\n**************************************************************************************");

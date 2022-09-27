@@ -9,30 +9,22 @@ namespace GPA_Calculator
 {
     internal class PrintTable
     {
-        public static void PrintTableMethod(List<Course> courseList)
+        public static void TableGenerater(List<Course> courseList)
         {
 
             Console.ForegroundColor = ConsoleColor.DarkRed;  
             //Console.Clear();
             var table = new ConsoleTable($"Course & Code", $"Course Unit", $"Grade", $"Grade Unit", $"Weight Point", $"Remark");
 
-            foreach (var item in courseList)
+            foreach (var j in courseList)
             {
-                table.AddRow($"{item.courseName}", $"{item.courseUnits}", $"{item.grade}", $"{item.gradeUnit}", $"{item.weightPoint}", $"{item.remark}");
+                table.AddRow($"{j.courseName}", $"{j.courseUnits}", $"{j.grade}", $"{j.gradeUnit}", $"{j.weightPoint}", $"{j.remark}");
             }
              Console.WriteLine(table);
-            Grade_Computer.CalculcateStudentGrade();
+            Grade_Computer.ComputeStudentGrade();
+             
 
-
-           /* Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("\n|--------------|-----------|------|-----------|------------|------------|\n" +
-                              "|COURSE & CODE |COURSE UNIT|GRADE |GRADE UNIT |GRADE POINT |REMARK      |\n" +
-                              "|--------------|-----------|------|-----------|------------|------------|");
-            foreach (var z in courseList)
-            {
-                Console.WriteLine($"|{z.courseName}       |{z.courseUnits}          |{z.grade}     |{z.gradeUnit}          |{z.weightPoint}           |{z.remark}  |");
-            }
-            Console.WriteLine("|--------------|-----------|------|-----------|------------|------------|");*/
+ 
 
 
         }

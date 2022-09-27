@@ -22,7 +22,7 @@ namespace GPA_Calculator
 
             Console.WriteLine("***************************************************************************************************");
 
-            Grade_Computer.CalculcateStudentGrade();
+            Grade_Computer.ComputeStudentGrade();
 
 
 
